@@ -1,7 +1,6 @@
 package com.vsu.loseva.sectorrasterization;
 
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 
 public class SectorDraw {
     public static void draw(Canvas canvas, double x, double y, int radius, double anglePoint,
@@ -12,7 +11,6 @@ public class SectorDraw {
         double yEnd;
 
         double angleHalf = angleSector / 2;
-        GraphicsContext gc = canvas.getGraphicsContext2D();
         double j = Math.min(10.0 / radius, 1.0);
 
         for (double i = 0; i < angleHalf; i = i + j) {
